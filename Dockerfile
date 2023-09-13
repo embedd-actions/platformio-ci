@@ -1,10 +1,9 @@
-FROM alpine:latest
+FROM node:16-bullseye
 
-RUN apk update && \
-    apk add \
+RUN apt-get update && \
+    apt-get install \
     python3 \
-    py3-pip \
-    && \
-    pip3 install platformio \
-    && \
-    apk cache -v sync
+    python3-pip \
+    -y && \
+    rm -rf /var/cache/apt && \
+    pip3 install platformio
