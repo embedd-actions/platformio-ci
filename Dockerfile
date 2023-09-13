@@ -1,9 +1,10 @@
-FROM debian:stable-slim
+FROM alpine:latest
 
-RUN apt-get update && \
-    apt-get install \
+RUN apk update && \
+    apt add \
     python3 \
-    python3-pip \
-    -y && \
-    rm -rf /var/cache/apt && \
-    pip3 install platformio
+    py3-pip \
+    && \
+    pip3 install platformio \
+    && \
+    apk cache -v sync
