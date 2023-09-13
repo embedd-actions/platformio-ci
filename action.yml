@@ -1,0 +1,9 @@
+name: 'Platformio build'
+description: 'Building platformio projects'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+     - pio
+     - run
+ 
