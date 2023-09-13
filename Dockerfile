@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && \
-    apt add \
+    apk add \
     python3 \
     py3-pip \
     && \
