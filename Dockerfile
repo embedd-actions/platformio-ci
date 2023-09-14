@@ -1,9 +1,11 @@
-FROM node:16-bullseye
+FROM debian:stable-slim
 
 RUN apt-get update && \
     apt-get install \
     python3 \
     python3-pip \
-    -y && \
+    -y \
+    --no-install-recommends \
+    && \
     rm -rf /var/cache/apt && \
-    pip3 install platformio
+    pip3 install platformio --break-system-packages
