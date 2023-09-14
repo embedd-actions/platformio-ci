@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
         
       - name: Build   
-        uses: embedd-actions/platformio-ci@v1 
+        uses: embedd-actions/platformio-ci@v2 
 
 
 ```
