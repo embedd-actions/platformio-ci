@@ -2,7 +2,7 @@ name: 'Platformio build'
 description: 'Building platformio projects'
 runs:
   using: 'docker'
-  image: 'Action.Dockerfile'
+  image: 'docker://sergeyladanov/platformio:v1'
   args:
      - pio
      - run
