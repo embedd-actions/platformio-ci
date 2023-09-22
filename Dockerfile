@@ -9,3 +9,9 @@ RUN apt-get update && \
     && \
     rm -rf /var/cache/apt && \
     pip3 install platformio --break-system-packages
+
+ADD entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
