@@ -1,9 +1,13 @@
 name: 'Platformio build'
 description: 'Building platformio projects'
+inputs:
+   command:
+     description: 'Command'
+     required: true
+     default: pio run
 runs:
   using: 'docker'
-  image: 'docker://sergeyladanov/platformio:v1'
+  image: 'docker://sergeyladanov/platformio:v2'
   args:
-     - pio
-     - run
+     - ${{ inputs.command }}
  
