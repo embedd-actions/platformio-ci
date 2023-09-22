@@ -16,5 +16,5 @@ jobs:
       - name: Build   
         uses: embedd-actions/platformio-ci@v2
         with: # Optional you can change command
-          command: pio run #
+          command: pio run
 ```
