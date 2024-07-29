@@ -4,7 +4,7 @@ Building platformio projects
 
 ## Usage
 
-```
+```yml
 
 jobs:      
   build:
