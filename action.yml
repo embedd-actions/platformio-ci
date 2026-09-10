@@ -7,7 +7,7 @@ inputs:
      default: pio run
 runs:
   using: 'docker'
-  image: 'docker://sergeyladanov/platformio:v2'
+  image: 'docker://sergeyladanov/platformio:v3'
   args:
      - ${{ inputs.command }}
  
