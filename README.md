@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v3
         
       - name: Build   
-        uses: embedd-actions/platformio-ci@v2
+        uses: embedd-actions/platformio-ci@v3
         with: # Optional you can change command
           command: pio run
 ```
